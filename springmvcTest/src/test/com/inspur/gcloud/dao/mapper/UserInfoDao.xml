@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.inspur.gcloud.dao.UserInfoDao" >
+    <resultMap id="BaseResultMap" type="com.inspur.gcloud.data.UserInfo" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+        id, name
+    </sql>
+    
+    <!-- 根据ID和name获取用户信息 -->
+    <select id="getUserInfo" resultMap="BaseResultMap" >
+        select 
+        <include refid="Base_Column_List" />
+        from user_info
+        <where>
+			 id = '${id}' or name = '${name}'
+		</where>
+    </select>
+    
+</mapper>
