@@ -34,5 +34,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    <input id="reset" type="reset" value="重置"/>
 	    </fieldset>
     </form>
+    
+    <form action="user/2" method="post">
+    	<input type="hidden" name="_method" value="PUT">
+    	<input type="submit" value="put">
+	</form>
+ 
+	<form action="user/1" method="post">
+   	 	<input type="submit" value="post">
+	</form>
+ 
+	<form action="user/3" method="get">
+   		<input type="submit" value="get">
+	</form>
+ 
+	<form action="user/4" method="post">
+    	<input type="hidden" name="_method" value="DELETE">
+    	<input type="submit" value="delete">
+	</form>
   </body>
 </html>
