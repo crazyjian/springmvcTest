@@ -8,4 +8,8 @@ public interface UserInfoDao {
 
 	public UserInfo getUserInfo(@Param("id") Integer id, @Param("name") String name);
 	
+	public void insertUserInfo(UserInfo userInfo);
+	
+	public void deleteById(Integer id);
+	
 }

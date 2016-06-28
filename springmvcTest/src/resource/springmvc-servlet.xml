@@ -13,7 +13,13 @@
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
     
 	
-	<mvc:annotation-driven />  <!-- 支持spring3.0新的mvc注解 -->
+	<mvc:annotation-driven conversion-service="conversionService"/>  <!-- 支持spring3.0新的mvc注解 -->
+	
+	<!-- 访问静态资源 -->
+	<mvc:resources mapping="/skins/css/**" location="/skins/css/" />
+    <mvc:resources mapping="/skins/js/**" location="/skins/js/" />
+    <mvc:resources mapping="/skins/img/**" location="/skins/img/" />
+	
 	<!-- 对web包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 -->
 	<context:component-scan base-package="com.inspur.gcloud" />
 
@@ -48,5 +54,16 @@
         </property>
     </bean>  
 	
+	<!--数据格式转化-->
+	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="formatterRegistrars">
+			<list>
+			<!-- 日期转化 :StringToDate -->
+				<bean class="com.inspur.gcloud.converter.MyFormatterRegistrar">
+					<constructor-arg name="datePattern" value="MM-dd-yyyy"></constructor-arg>
+				</bean>
+			</list>
+		</property>
+	</bean>
 </beans>
 

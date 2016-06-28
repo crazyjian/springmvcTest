@@ -1,6 +1,7 @@
 package com.inspur.gcloud.data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import org.springframework.stereotype.Component;
 
@@ -16,6 +17,8 @@ public class UserInfo implements Serializable {
 	private Integer id;
 	
 	private String name;
+	
+	private Date time;
 
 	public Integer getId() {
 		return id;
@@ -31,5 +34,13 @@ public class UserInfo implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Date getTime() {
+		return time;
+	}
+
+	public void setTime(Date time) {
+		this.time = time;
 	}
 }

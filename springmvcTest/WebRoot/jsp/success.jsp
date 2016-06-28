@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -22,7 +23,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
 	读取成功！<br>
+	编号：${userInfo.id}<br>
 	编号：${id}<br>
-	姓名：${name}
+	姓名：${userInfo.name}<br>
+	日期：${userInfo.time}<br>
+	格式化后日期:<fmt:formatDate value="${userInfo.time}"  pattern="yyyy-MM-dd"  /><br>
+	<img alt="" src="jsp/2.jpg" />
   </body>
 </html>
