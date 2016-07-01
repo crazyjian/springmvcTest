@@ -19,91 +19,83 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
-	<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
-	
-	
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style type="text/css">
+  #div1 img
+  {
+  height:400px;
+  width:1500px;
+  }
+  
+  #div2 img
+  {
+  height:400px;
+  }
+  </style>
+
   </head>
   
   <body>
-	<div class="container">
+	<div class="container-fluid">
 	<div class="row">
-		<div class="span12">
-			<div class="navbar">
-				<div class="navbar-inner">
-					<div class="container-fluid">
-						 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand">网站名</a>
-						<div class="nav-collapse collapse navbar-responsive-collapse">
-							<ul class="nav">
-								<li class="active">
-									<a href="#">主页</a>
-								</li>
-								<li>
-									<a href="#">链接</a>
-								</li>
-								<li>
-									<a href="#">链接</a>
-								</li>
-								<li class="dropdown">
-									 <a data-toggle="dropdown" class="dropdown-toggle" href="#">下拉菜单<strong class="caret"></strong></a>
-									<ul class="dropdown-menu">
-										<li>
-											<a href="#">下拉导航1</a>
-										</li>
-										<li>
-											<a href="#">下拉导航2</a>
-										</li>
-										<li>
-											<a href="#">其他</a>
-										</li>
-										<li class="divider">
-										</li>
-										<li class="nav-header">
-											标签
-										</li>
-										<li>
-											<a href="#">链接1</a>
-										</li>
-										<li>
-											<a href="#">链接2</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<ul class="nav pull-right">
-								<li>
-									<a href="#">右边链接</a>
-								</li>
-								<li class="divider-vertical">
-								</li>
-								<li class="dropdown">
-									 <a data-toggle="dropdown" class="dropdown-toggle" href="#">下拉菜单<strong class="caret"></strong></a>
-									<ul class="dropdown-menu">
-										<li>
-											<a href="#">下拉导航1</a>
-										</li>
-										<li>
-											<a href="#">下拉导航2</a>
-										</li>
-										<li>
-											<a href="#">其他</a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="#">链接3</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-						
-					</div>
-				</div>
+		<div class="col-md-12">
+			<nav class="navbar navbar-default">
+				  <div class="container-fluid">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="#">Brand</a>
+				    </div>
 				
-			</div>
-			<div class="carousel slide" id="carousel-638775">
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav">
+				        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+				        <li><a href="#">Link</a></li>
+				        <li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="#">Action</a></li>
+				            <li><a href="#">Another action</a></li>
+				            <li><a href="#">Something else here</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="#">Separated link</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="#">One more separated link</a></li>
+				          </ul>
+				        </li>
+				      </ul>
+				      <form class="navbar-form navbar-left" role="search">
+				        <div class="form-group">
+				          <input type="text" class="form-control" placeholder="Search">
+				        </div>
+				        <button type="submit" class="btn btn-default">Submit</button>
+				      </form>
+				      <ul class="nav navbar-nav navbar-right">
+				        <li><a href="#">Link</a></li>
+				        <li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="#">Action</a></li>
+				            <li><a href="#">Another action</a></li>
+				            <li><a href="#">Something else here</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="#">Separated link</a></li>
+				          </ul>
+				        </li>
+				      </ul>
+				    </div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+				</nav>
+			<div class="carousel slide" id="carousel-638775" data-ride="carousel" data-interval="3000">
 				<ol class="carousel-indicators">
 					<li data-slide-to="0" data-target="#carousel-638775"  class="active">
 					</li>
@@ -112,7 +104,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<li data-slide-to="2" data-target="#carousel-638775">
 					</li>
 				</ol>
-				<div class="carousel-inner">
+				<div class="carousel-inner"  id="div1">
 					<div class="item  active">
 						<img alt="111" src="./skins/img/surf.jpg" />
 						<div class="carousel-caption">
@@ -146,18 +138,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</p>
 						</div>
 					</div>
-				</div> <a data-slide="prev" href="#carousel-638775" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-638775" class="right carousel-control">›</a>
+				</div> 
+				<a data-slide="prev" href="#carousel-638775" class="carousel-control left">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    				<span class="sr-only">Previous</span>
+				</a> 
+				<a data-slide="next" href="#carousel-638775" class="carousel-control right">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    				<span class="sr-only">Next</span>
+				</a>
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="span4">
+	<div class="row"  id="div2">
+		<div class="col-md-4">
 		<img alt="" src="jsp/2.jpg" />
 		</div>
-		<div class="span4">
+		<div class="col-md-4">
 		<img alt="" src="jsp/2.jpg" />
 		</div>
-		<div class="span4">
+		<div class="col-md-4">
 		<img alt="" src="jsp/2.jpg" />
 		</div>
 	</div>

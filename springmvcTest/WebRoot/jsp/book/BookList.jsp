@@ -24,12 +24,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	
-<!-- 	<style type="text/css">
-		table, tr, td {
-			border:10px solid #aaee77;
-			padding:3px;
-		}
-	</style> -->
+<style type="text/css">
+	body {
+	background-image:url(./skins/img/3.jpg);
+	}
+	</style>
   </head>
   
   <body>
@@ -92,8 +91,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				${fn:containsIgnoreCase(myString,"hello") }
 				<c:out value="${myString}" escapeXml="false"/>
 				${fn:escapeXml("<br>Hello world") }<br>
-				${fn:length("asdfasdf") }
+				${fn:length("www") }
     		</div>
+    	</div>
+    	</div class="row">
+    		<div class="well">
+ 				 qqqqq
+			</div>
     	</div>
     </div>
   </body>

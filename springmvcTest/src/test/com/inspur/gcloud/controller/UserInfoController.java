@@ -1,5 +1,6 @@
 package com.inspur.gcloud.controller;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -103,4 +104,15 @@ public class UserInfoController {
 	        System.out.println("delete"+id);
 	        return "success";
 	    }
+	    
+	    @RequestMapping("/jsp/ajax")  
+	    public @ResponseBody Map<String,Object> login(HttpServletRequest request,HttpServletResponse response) throws IOException{  
+	        System.out.println(request.getParameter("a"));  
+	        Map<String,Object> map = new HashMap<String,Object>();  
+
+	        System.out.println("成功");  
+	        map.put("msg", "成功");  
+
+	        return map;  
+	    }  
 }
